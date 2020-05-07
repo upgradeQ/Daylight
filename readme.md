@@ -1,19 +1,17 @@
 # Daylight 
 
- <img align="right" width="600" height="180" src="https://i.imgur.com/1p2C48W.png" alt="example with window projector">  
-
-Play osu over overlay (easy pass HD and or FL).  
-Using mpv API to control video , and python to control hotkeys.  
-Easily control media source for use in OBS scene as overlay with mpv.  
-# Requirements 
+* [Pygame transparent click through overlay](pygame_overlay.py)
+* [example of mpv API](osu_overlay.py)
+# Play osu over overlay (easily pass HD and or FL).    
+## Requirements 
 - OBS 
 - Autohotkey **optional**
 - Python 3 and mpv with scripting support **optional**
-# Installation
+## Installation
 * Install autohotkey(optional) , python 64 bit , [mpv 64 bit](https://sourceforge.net/projects/mpv-player-windows/files/64bit/mpv-x86_64-20200105-git-9eb3991.7z/download), [mpv-1.dll](https://sourceforge.net/projects/mpv-player-windows/files/libmpv/mpv-dev-x86_64-20200105-git-9eb3991.7z/download) 64 bit (dev version)
 * Place mpv.exe & mpv-1.dll  where is your python.exe  [details](https://github.com/jaseg/python-mpv#libmpv) , run `python -m pip install python-mpv keyboard`
 * Record / find replay matching your screen resolution
-# Methods 
+## Methods 
 **AHK and scripted video** `windows` - fullscreen transparent overlay  
 1. Change replay recording  to `song_name.mp4`
 2. Launch `python osu_overlay.py`, modify `p.time_pos` if needed. Keys are: `e` : pause , `1`: go to start of the song , `2`: fullscreen toggle 
@@ -38,5 +36,6 @@ overlay and the game  will not be synchronized.
 add Color Correction filter and set opacity to mpv source, project it to window or second screen 
 4. same 
 # Notes
-> replay recording with max resolution for second screen or custom resolution for window projector.  
-With OBS you can tweak aspect ratio.
+replay recording with max resolution for second screen or custom resolution for window projector.  
+With OBS you can tweak aspect ratio.  
+pygame overlay requires ahk running under admin , so it's only `windows`
